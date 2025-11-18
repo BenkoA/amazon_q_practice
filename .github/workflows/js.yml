@@ -3,9 +3,9 @@ name: js CI with npm
 
 on:
   push:
-    branches: [ cicd-pr ]
+    branches: [ main ]
   pull_request:
-    branches: [ cicd-pr ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./js/starter
+        working-directory: ./starter
 
     steps:
       - uses: actions/checkout@v4
